@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://edutect_mw.vercel.app/sitemap.xml
