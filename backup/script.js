@@ -189,30 +189,3 @@ window.addEventListener('load', () => {
         document.body.style.opacity = '1';
     }, 100);
 });
-// ===============================
-// FAQ ACCORDION FUNCTIONALITY
-// ===============================
-function toggleFAQ(element) {
-    const content = element.querySelector('.faq-content');
-    const chevron = element.querySelector('[data-lucide="chevron-down"]');
-    
-    // Close all other FAQs
-    document.querySelectorAll('.faq-item').forEach(item => {
-        if (item !== element) {
-            const otherContent = item.querySelector('.faq-content');
-            const otherChevron = item.querySelector('[data-lucide="chevron-down"]');
-            if (otherContent) {
-                otherContent.classList.add('hidden');
-                otherChevron.style.transform = 'rotate(0deg)';
-            }
-        }
-    });
-    
-    // Toggle current FAQ
-    content.classList.toggle('hidden');
-    if (content.classList.contains('hidden')) {
-        chevron.style.transform = 'rotate(0deg)';
-    } else {
-        chevron.style.transform = 'rotate(180deg)';
-    }
-}
